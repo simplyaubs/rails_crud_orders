@@ -15,7 +15,7 @@
 <%= @orders.each do |order| %>
 <ul>
   <li>
-    <%= order.company %>, <%= order.product %>
+    <%= link_to "#{order.company}", order_path(order) %>, <%= order.product %>
   </li>
 </ul>
 <% end %>
