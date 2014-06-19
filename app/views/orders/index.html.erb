@@ -1,0 +1,21 @@
+<%= form_for @order do |f| %>
+<p>
+  <%= f.label :company %>
+  <%= f.text_field :company %>
+</p>
+  <p>
+    <%= f.label :product %>
+    <%= f.text_field :product %>
+  </p>
+  <p>
+    <%= f.submit 'Add order' %>
+  </p>
+<% end %>
+
+<%= @orders.each do |order| %>
+<ul>
+  <li>
+    <%= order.company %>, <%= order.product %>
+  </li>
+</ul>
+<% end %>
